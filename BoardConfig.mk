@@ -307,8 +307,5 @@ WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
 
-# Pre-opt SystemUI
-#PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
-
 # inherit from the proprietary version
 -include vendor/asus/X00T/BoardConfigVendor.mk

@@ -68,3 +68,8 @@ patchelf --add-needed libprocessgroup.so "$BLOB_ROOT"/vendor/lib/hw/sound_trigge
 patchelf --add-needed libprocessgroup.so "$BLOB_ROOT"/vendor/lib64/hw/sound_trigger.primary.sdm660.so
 
 "${MY_DIR}/setup-makefiles.sh"
+
+# Load camera.sdm660.so shim
+CAM_SDM660="$DEVICE_BLOB_ROOT"/vendor/lib/hw/camera.sdm660.so
+patchelf --add-needed camera.sdm660_shim.so "$CAM_SDM660"
+

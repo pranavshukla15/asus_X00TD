@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_X00T.mk
+    $(LOCAL_DIR)/superior_X00T.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_X00T-userdebug
+    superior_X00T-userdebug
 

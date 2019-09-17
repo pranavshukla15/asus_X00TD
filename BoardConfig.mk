@@ -22,6 +22,7 @@
 # definition file).
 #
 
+WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 DEVICE_PATH := device/asus/X00T
 
 BOARD_VENDOR := asus

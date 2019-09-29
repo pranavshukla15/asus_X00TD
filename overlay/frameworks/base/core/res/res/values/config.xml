@@ -1063,4 +1063,9 @@
 
     <!-- reference volume index for music stream to limit headphone volume and display warning -->
     <integer name="config_safe_media_volume_index">15</integer>
+
+    <!-- Whether to artificially interpret all signal strengths as
+         one bar higher than they actually are -->
+    <bool name="config_inflateSignalStrength">true</bool>
+
 </resources>

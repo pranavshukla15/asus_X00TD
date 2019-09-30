@@ -286,8 +286,8 @@ include device/qcom/sepolicy/sepolicy.mk
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := libinit_X00T
-TARGET_RECOVERY_DEVICE_MODULES := libinit_X00T
+#TARGET_INIT_VENDOR_LIB := libinit_X00T
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_X00T
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true

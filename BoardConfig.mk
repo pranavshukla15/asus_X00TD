@@ -22,16 +22,16 @@
 # definition file).
 #
 
-WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 DEVICE_PATH := device/asus/X00T
-
 BOARD_VENDOR := asus
 
-#temp
+#ten
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ENG_DEBUG_TAGS := true
 TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
 TARGET_USES_HARDWARE_QCOM_GPS := false
+USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
+WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 
 # Apex Image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -74,7 +74,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/asus/sdm660
 TARGET_KERNEL_CONFIG := X00T_defconfig
 TARGET_KERNEL_VERSION := 4.4
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 #TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := 9.0.6
 
@@ -210,10 +210,10 @@ TARGET_QCOM_AUDIO_VARIANT := caf-msm8998
 TARGET_QCOM_MEDIA_VARIANT := caf-msm8998
 TARGET_QCOM_DISPLAY_VARIANT := caf-msm8998
 
-PRODUCT_SOONG_NAMESPACES += \
-    hardware/qcom/display-$(TARGET_QCOM_DISPLAY_VARIANT) \
-    hardware/qcom/audio-$(TARGET_QCOM_AUDIO_VARIANT) \
-    hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)
+#PRODUCT_SOONG_NAMESPACES += \
+#    hardware/qcom/display-$(TARGET_QCOM_DISPLAY_VARIANT) \
+#    hardware/qcom/audio-$(TARGET_QCOM_AUDIO_VARIANT) \
+#    hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
@@ -282,9 +282,10 @@ VENDOR_SECURITY_PATCH := 2018-06-05
 
 # SELinux
 
-include device/qcom/sepolicy/sepolicy.mk
+#include device/qcom/sepolicy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/minimal_sepolicy
 
 # Vendor init
 #TARGET_INIT_VENDOR_LIB := libinit_X00T
@@ -305,7 +306,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
 
 # Pre-opt SystemUI
-PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
+#PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
 
 # inherit from the proprietary version
 -include vendor/asus/X00T/BoardConfigVendor.mk

@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common Superior stuff
-$(call inherit-product, vendor/superior/config/common.mk)
+# Inherit some common Devilian stuff
+$(call inherit-product, vendor/devilian/config/common_full_phone.mk)
 
 # Inherit from X00T device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -28,13 +28,20 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := X00T
 PRODUCT_MANUFACTURER := asus
-PRODUCT_NAME := superior_X00T
+PRODUCT_NAME := devilian_X00T
 PRODUCT_MODEL := ZenFone Max Pro M1
+
+# Bootanimation Res
 TARGET_BOOT_ANIMATION_RES := 1080
+
+# Devilian Offcial 
+DEVILIAN_BUILD_TYPE=OFFICIAL
+
 PRODUCT_GMS_CLIENTID_BASE := android-asus
+
 TARGET_VENDOR := asus
 TARGET_VENDOR_PRODUCT_NAME := X00T
-SUPERIOR_OFFCIAL := true
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="walleye-user 8.1.0 OPM1.171019.011 4448085 release-keys"
 

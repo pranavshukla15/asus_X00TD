@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_X00T.mk
+    $(LOCAL_DIR)/devilian_X00T.mk
 
 COMMON_LUNCH_CHOICES := \
-    superior_X00T-userdebug
+    devilian_X00T-userdebug
 
